@@ -1,7 +1,5 @@
 import {
-  AcademicCapIcon,
   ArrowDownTrayIcon,
-  BuildingOffice2Icon,
   CalendarIcon,
   FlagIcon,
   MapIcon,
@@ -9,10 +7,7 @@ import {
 } from '@heroicons/react/24/outline';
 
 import GithubIcon from '../components/Icon/GithubIcon';
-import InstagramIcon from '../components/Icon/InstagramIcon';
 import LinkedInIcon from '../components/Icon/LinkedInIcon';
-import StackOverflowIcon from '../components/Icon/StackOverflowIcon';
-import TwitterIcon from '../components/Icon/TwitterIcon';
 import heroImage from '../images/header-background.webp';
 import porfolioImage1 from '../images/portfolio/portfolio-1.jpg';
 import porfolioImage2 from '../images/portfolio/portfolio-2.jpg';
@@ -44,8 +39,8 @@ import {
  * Page meta data
  */
 export const homePageMeta: HomepageMeta = {
-  title: 'React Resume Template',
-  description: "Example site built with Tim Baker's react resume template",
+  title: 'Jason Davis-Cooke',
+  description: "JDC's personal site built with Tim Baker's react resume template",
 };
 
 /**
@@ -69,18 +64,23 @@ export type SectionId = (typeof SectionId)[keyof typeof SectionId];
  */
 export const heroData: Hero = {
   imageSrc: heroImage,
-  name: `I'm Tim Baker.`,
+  name: `Hi! I'm Jason Davis-Cooke.`,
   description: (
     <>
       <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
-        I'm a Victoria based <strong className="text-stone-100">Full Stack Software Engineer</strong>, currently working
-        at <strong className="text-stone-100">Instant Domains</strong> helping build a modern, mobile-first, domain
-        registrar and site builder.
+        I'm a Massachusetts based <strong className="text-stone-100">Software Engineer</strong> currently looking
+        for my next opportunity. I have a wide variety of experiences in both IC roles and management roles that 
+        help me bring a unique perspective to any job. I am driven by my hunger for learning and am best when 
+        thrown into something outside of my comfort zone and am forced to learn quickly to rise
+        to new challenges. Below you can download my resume for a brief summary of my experience, and in the later sections
+        of this page you can read a more in depth descrition of what I've accomplished over my career.
       </p>
       <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
-        In my free time time, you can catch me training in <strong className="text-stone-100">Muay Thai</strong>,
-        plucking my <strong className="text-stone-100">banjo</strong>, or exploring beautiful{' '}
-        <strong className="text-stone-100">Vancouver Island</strong>.
+        Outside of work, I enjoy physical exersize and challenge, with my latest interest being triathlons. 
+        I am also a <strong className="text-stone-100">very casual</strong> golfer, and I also play in a weekly adult 
+        floor hockey game. 
+        Finally, I am the co-host of the <strong><a href="https://www.youtube.com/channel/UCOouOjxX0Kq6aHno9_bZZeg"> Brainwave Exchange Podcast </a> </strong>
+            where we aim to learn from the stories and experiences of everyday people. 
       </p>
     </>
   ),
@@ -104,16 +104,28 @@ export const heroData: Hero = {
  */
 export const aboutData: About = {
   profileImageSrc: profilepic,
-  description: `Use this bio section as your way of describing yourself and saying what you do, what technologies you like
-  to use or feel most comfortable with, describing your personality, or whatever else you feel like throwing
-  in.`,
+  description:(
+    <>
+    <p>I've been in the software profession full time since 2012 and in that time I have held a wide range of positions
+  giving me a diverse set of experiences to pull from when solving problems. The roles I have held include Performance Engineer,
+  DevOps Engineer, Lead Software Engineer, Principal Software Engineer, Senior Engineering Manager, and Director of Software Engineering.
+  I have had as many as 12 direct reports spread across 4 different teams, and had team members in thet US, Brazil, Europe, and India so I am
+  comfortable with distributed/remote teams. I build my teams on a foundation of trust and strongly believe that people bring their best to work
+  when they feel safe, respected, and heard. To this end, I provide my teams with the latitude to do their jobs as they see fit within a defined set
+  of guardrails. I believe in removing friction on well defined paths and patterns and introducing friction onto non-standard diversions from those 
+  patterns. This lets engineers move fast and express themselves without risking the quality and integrity of the systems being worked on, unless
+  they have a strong and compelling reason to do so.</p>
+  <p>I have spent the latter half of my career in positions where dealing with uncertainty and being able to pivot quickly were a requirement. I have learned
+  to handle competing priorities from multiple stakeholders and to set realistic expectations based on available engineering capacity. I have worked 
+  with product managers, senior leadership, and other business stakeholders to craft engineering roadmaps that provide reasonable estimates 
+  for the completion of features desired by the business. </p>
+    </> 
+  ),
   aboutItems: [
-    {label: 'Location', text: 'Victoria, BC', Icon: MapIcon},
-    {label: 'Age', text: '29', Icon: CalendarIcon},
-    {label: 'Nationality', text: 'Canadian / Irish', Icon: FlagIcon},
-    {label: 'Interests', text: 'Motorcycles, Muay Thai, Banjos', Icon: SparklesIcon},
-    {label: 'Study', text: 'University of Victoria', Icon: AcademicCapIcon},
-    {label: 'Employment', text: 'Instant Domains, inc.', Icon: BuildingOffice2Icon},
+    {label: 'Location', text: 'Whitinsville, MA', Icon: MapIcon},
+    {label: 'Age', text: '34', Icon: CalendarIcon},
+    {label: 'Nationality', text: 'American / English', Icon: FlagIcon},
+    {label: 'Interests', text: 'Triathlons, Golf, Peloton, Music', Icon: SparklesIcon},
   ],
 };
 
@@ -122,36 +134,40 @@ export const aboutData: About = {
  */
 export const skills: SkillGroup[] = [
   {
-    name: 'Spoken languages',
+    name: 'Management',
     skills: [
       {
-        name: 'English',
+        name: 'Communication',
         level: 10,
       },
       {
-        name: 'French',
-        level: 4,
+        name: 'Team Building',
+        level: 8,
       },
       {
-        name: 'Spanish',
-        level: 3,
+        name: 'Hiring',
+        level: 8,
+      },
+      {
+        name: 'Agile / Scrum',
+        level: 8,
       },
     ],
   },
   {
-    name: 'Frontend development',
+    name: 'Infrastructure',
     skills: [
       {
-        name: 'React',
+        name: 'AWS',
         level: 9,
       },
       {
-        name: 'Typescript',
-        level: 7,
+        name: 'Terraform',
+        level: 8
       },
       {
-        name: 'GraphQL',
-        level: 6,
+        name: 'GCP',
+        level: 5,
       },
     ],
   },
@@ -159,33 +175,34 @@ export const skills: SkillGroup[] = [
     name: 'Backend development',
     skills: [
       {
-        name: 'Node.js',
+        name: 'python',
         level: 8,
+      },      
+      {
+        name: 'postgres',
+        level: 9,
       },
       {
-        name: 'Rust',
-        level: 5,
+        name: 'javascript/typescript',
+        level: 6,
       },
+
       {
-        name: 'Golang',
-        level: 4,
+        name: 'C#',
+        level: 3,
       },
     ],
   },
   {
-    name: 'Mobile development',
+    name: 'API Frameworks',
     skills: [
       {
-        name: 'React Native',
+        name: 'Flask/FastAPI',
         level: 9,
       },
       {
-        name: 'Flutter',
-        level: 4,
-      },
-      {
-        name: 'Swift',
-        level: 3,
+        name: 'ExpressJS',
+        level: 7,
       },
     ],
   },
@@ -196,69 +213,69 @@ export const skills: SkillGroup[] = [
  */
 export const portfolioItems: PortfolioItem[] = [
   {
-    title: 'Project title 1',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
+    title: 'access-management-api',
+    description: 'Gpython api built as interface for open policy agent providing attribute based access controls for Indigo Marketplace with strict p95 5ms latency requirements.',
+    url: '',
     image: porfolioImage1,
   },
   {
-    title: 'Project title 2',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
+    title: 'identity-api',
+    description: 'python api built to manage user identity information for the Indigo Marketplace',
+    url: '',
     image: porfolioImage2,
   },
   {
-    title: 'Project title 3',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
+    title: 'accounts-api',
+    description: 'python api built to manage business entities such as farms and grain elevators',
+    url: '',
     image: porfolioImage3,
   },
   {
-    title: 'Project title 4',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
+    title: 'marketplace-ingestion-api',
+    description: 'python api built to ingest third party grain bid information for usage in the Indigo Marketplace.',
+    url: '',
     image: porfolioImage4,
   },
   {
-    title: 'Project title 5',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
+    title: 'clio-api',
+    description: 'python api built to accept upload of key documents such as signed contracts and financial documents. also tracked the status of workflows involving those documents.',
+    url: '',
     image: porfolioImage5,
   },
   {
-    title: 'Project title 6',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
+    title: 'transport-pricing-api',
+    description: 'python api built to allow transport carriers to define arbitrary zones and pricing to transport grain within those zones. upon requesting pricing information for the transportation of grain between two points, the api used a custom ball tree algorithm (patent pending) to find the best price for transportation. ',
+    url: '',
     image: porfolioImage6,
   },
   {
-    title: 'Project title 7',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
+    title: 'Sym Pipeline Insights and Nominations',
+    description: 'React SPA with a python API backend used to track the progress of candidate microbes through the research and commercialization pipelines. ',
+    url: '',
     image: porfolioImage7,
   },
   {
-    title: 'Project title 8',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
+    title: 'Genomic Pipeline',
+    description: 'modular, scalable pipeline built using AWS Step Functions and AWS Batch to run dockerized genomic analyses of collected microbial samples',
+    url: '',
     image: porfolioImage8,
   },
   {
-    title: 'Project title 9',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
+    title: 'Community Sequencing API',
+    description: 'typescript/graphql api built to manage data collected from running experiments on soil samples on community farms. Deployed to AWS Fargate',
+    url: '',
     image: porfolioImage9,
   },
   {
-    title: 'Project title 10',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
+    title: 'Cimpress Open Access Management',
+    description: 'nodejs API built for providing a role based access control system to the Cimpress Open platform. Provided functionality for role, group, and permission administration as well as authorization decisions in <50ms. nodejs / AWS Elastic Beanstalk',
+    url: '',
     image: porfolioImage10,
   },
   {
-    title: 'Project title 11',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
+    title: 'Cimpress Open Catalog API',
+    description: 'Ruby on Rails api built to allow developers on the Cimpress Open platform to register the definitions of their APIs and discover other APIs available to use.  Ruby on Rails / AWS Elastic Beanstalk',
+    url: '',
     image: porfolioImage11,
   },
 ];
@@ -266,44 +283,58 @@ export const portfolioItems: PortfolioItem[] = [
 /**
  * Resume section -- TODO: Standardize resume contact format or offer MDX
  */
-export const education: TimelineItem[] = [
-  {
-    date: 'April 2007',
-    location: 'Clown college',
-    title: 'Masters in Beer tasting',
-    content: <p>Describe your experience at school, what you learned, what useful skills you have acquired etc.</p>,
-  },
-  {
-    date: 'March 2003',
-    location: 'School of Business',
-    title: 'What did you study 101',
-    content: <p>Describe your experience at school, what you learned, what useful skills you have acquired etc.</p>,
-  },
-];
+
 
 export const experience: TimelineItem[] = [
   {
-    date: 'March 2010 - Present',
-    location: 'Awesome Development Company',
-    title: 'Senior UX Engineer',
+    date: '2022 - 2023',
+    location: 'EQRx',
+    title: 'Director, Software Engineering',
     content: (
       <p>
-        Describe work, special projects, notable achievements, what technologies you have been working with, and
-        anything else that would be useful for an employer to know.
+        
       </p>
     ),
   },
   {
-    date: 'March 2007 - February 2010',
-    location: 'Garage Startup Studio',
-    title: 'Junior bug fixer',
+    date: '2018 - 2022',
+    location: 'Indigo Agriculture',
+    title: 'Senior Engineering Manager / Principal Software Engineer',
     content: (
       <p>
-        Describe work, special projects, notable achievements, what technologies you have been working with, and
-        anything else that would be useful for an employer to know.
+
       </p>
     ),
   },
+  {
+    date: '2014 - 2018',
+    location: 'Cimpress',
+    title: 'Lead Software Engineer / Devops Engineer',
+    content: (
+      <p>
+
+      </p>
+    ),
+  },
+  {
+      date: '2012 - 2014',
+      location: 'Vistaprint',
+      title: 'Performance Engineer / Senior Software Qualilty Engineer',
+      content: (
+        <p>
+  
+        </p>
+      ),
+  },
+];
+
+export const education: TimelineItem[] = [
+  {
+    date: 'June 2012',
+    location: 'University of Massachusetts at Dartmouth',
+    title: 'Bachelor of Science, Computer Science/Software Engineering',
+    content: <p></p>,
+  }
 ];
 
 /**
@@ -313,19 +344,25 @@ export const testimonial: TestimonialSection = {
   imageSrc: testimonialImage,
   testimonials: [
     {
-      name: 'John Doe',
-      text: 'Use this as an opportunity to promote what it is like to work with you. High value testimonials include ones from current or past co-workers, managers, or from happy clients.',
-      image: 'https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/169.jpg',
+      name: 'Anthony Torres - Founder of BitHippie ✌️ Wellness Enthusiast ❤️ Engineering Leader 🤓 Environmentalist 🌱',
+      text: `Jason and I have worked together for about 7 years at 3 different companies. 
+      Jason is a well-versed engineer, pragmatic in execution, and a great leader.
+      
+      We've navigated the ebbs and flows of company successes at our various employers. I'm so glad to have him on my side when the going gets tough.
+       
+      I give JDC my highest regards. 
+      
+      Jason will be an asset to you and your company no matter where he goes.
+      
+      Wishing you all the best!
+      
+      Onward 🚀`,
+      image: 'https://media.licdn.com/dms/image/C5603AQFaxez610mZOA/profile-displayphoto-shrink_800_800/0/1611344324097?e=1701302400&v=beta&t=U1_La2bo_2ae_IIKl7jiyEoXYKyCRhdqkIdxSGVcYWw',
     },
     {
-      name: 'Jane Doe',
-      text: 'Here you should write some nice things that someone has said about you. Encourage them to be specific and include important details (notes about a project you were on together, impressive quality produced, etc).',
-      image: 'https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/14.jpg',
-    },
-    {
-      name: 'Someone else',
-      text: 'Add several of these, and keep them as fresh as possible, but be sure to focus on quality testimonials with strong highlights of your skills/work ethic.',
-      image: 'https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/69.jpg',
+      name: 'Brian Petow - Principal Site Reliability Engineer at ASICS Digital',
+      text: `Jason is a well versed and adept Technologist. I have had the pleasure of working with him across a handful of different teams and projects. He has a very practical approach to problem solving that serves him and his team well. His technical skill set combined with his quick learning ability to pick up new tools and code, make him a highly coveted member of any fast paced software team. His value also shows through in his resourcefulness and ingenuity. If a mechanism or tool doesn't exist on Github, Jason is quick to publish it himself, or create a Lambda function that does the trick. He is a great overall teammate that I trust and can count on, and hope to work with again in the future!`,
+      image: 'https://media.licdn.com/dms/image/D4E03AQEl95K7lKMzEw/profile-displayphoto-shrink_800_800/0/1693925632594?e=1701302400&v=beta&t=5bJeLO3v9ns4ZjOmVJtbHrBUHZMvR51k8b4xg-UOBNo',
     },
   ],
 };
@@ -336,27 +373,27 @@ export const testimonial: TestimonialSection = {
 
 export const contact: ContactSection = {
   headerText: 'Get in touch.',
-  description: 'Here is a good spot for a message to your readers to let them know how best to reach out to you.',
+  description: 'Feel free to reach out if you want to chat or learn more about me.',
   items: [
     {
       type: ContactType.Email,
-      text: 'reachout@timbaker.me',
-      href: 'mailto:reachout@timbaker.me',
+      text: 'jason.daviscooke@gmail.com',
+      href: 'mailto:jason.daviscooke@gmail.com',
     },
     {
       type: ContactType.Location,
-      text: 'Victoria BC, Canada',
-      href: 'https://www.google.ca/maps/place/Victoria,+BC/@48.4262362,-123.376775,14z',
+      text: 'Whitinsville, MA',
+      href: 'https://maps.app.goo.gl/pGovetxu5WGBgfMS6',
     },
     {
-      type: ContactType.Instagram,
-      text: '@tbakerx',
-      href: 'https://www.instagram.com/tbakerx/',
+      type: ContactType.LinkedIn,
+      text: 'My LinkedIn',
+      href: 'https://linkedin.com/in/jason-davis-cooke',
     },
     {
       type: ContactType.Github,
-      text: 'tbakerx',
-      href: 'https://github.com/tbakerx',
+      text: 'My GitHub',
+      href: 'https://github.com/jdaviscooke',
     },
   ],
 };
@@ -365,9 +402,6 @@ export const contact: ContactSection = {
  * Social items
  */
 export const socialLinks: Social[] = [
-  {label: 'Github', Icon: GithubIcon, href: 'https://github.com/tbakerx'},
-  {label: 'Stack Overflow', Icon: StackOverflowIcon, href: 'https://stackoverflow.com/users/8553186/tim-baker'},
-  {label: 'LinkedIn', Icon: LinkedInIcon, href: 'https://www.linkedin.com/in/timbakerx/'},
-  {label: 'Instagram', Icon: InstagramIcon, href: 'https://www.instagram.com/reactresume/'},
-  {label: 'Twitter', Icon: TwitterIcon, href: 'https://twitter.com/TimBakerx'},
+  {label: 'Github', Icon: GithubIcon, href: 'https://github.com/jdaviscooke'},
+  {label: 'LinkedIn', Icon: LinkedInIcon, href: 'https://linkedin.com/in/jason-davis-cooke'}
 ];
