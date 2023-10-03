@@ -308,34 +308,70 @@ export const portfolioItems: PortfolioItem[] = [
 
 export const experience: TimelineItem[] = [
   {
-    date: '2022 - 2023',
-    location: 'EQRx',
-    title: 'Director, Software Engineering',
+    date: '2012 - 2014',
+    location: 'Vistaprint',
+    title: 'Performance Engineer / Senior Software Qualilty Engineer',
+    content: (
+      <p>
+        The start of my full time career came at Vistaprint in 2012. I joined a team with the primary responsibility of running the performance environment for the
+        vistaprint.com release cycle. Every three weeks, as was the release timeline, I would perform load tests using HPs LoadRunner putting the most important workflows
+        though the paces. In addition, I would manually capture code profiles of critical checkout workflows to ensure there were no bottlenecks introduced.
+        In the weeks between performance testing, I was writing software to help me perform these performance duties more efficiently. The first of these tools was
+        called VistaPerf. It was a C# application using WPF that was querying syslog data captured on the webservers for page loading times, and comparing the 7 day
+        rolling average. If that average rose above a certain threshold, it would pop an alert for someone to look closer at that page. I caught a number of non-obvious
+        peformance issues this way and allowed us to quickly remediate. Another application I wrote was also in WPF and was designed to ingest the code profiles I took
+        and perform analysis on them as well as compare them to the historical data. It would show a heat map of the method calls in the code, and make any large spike in
+        calls pop so I could flag them for further investigation.
+      </p>
+    ),
+  },
+  {
+    date: '2014 - 2018',
+    location: 'Cimpress',
+    title: 'Lead Software Engineer / Devops Engineer',
     content: (
       <>
+        <h2 className="text-left font-bold text-black opacity-100">The ICE Years - DevOps</h2>
         <p>
-          I joined EQRx in 2022 with the goal of building out the Software Engineering organization from the ground up. At the same time, there was work that needed
-          to be done immediately in support of the data science organization. I got hands on helping redefine a data model for an internal financial forecasting application
-          that was in need of performance improvements. At the same time, there was a need for the development of an API for providing a critical application governing the
-          distribution of drugs to clinical trial sites with the data needed to power the components of the app. I had some budget for hiring, but not a sufficient timeline
-          to source and hire full time engineers. To solve this problem I turned to contracting firms, and was able to hire two nearshore contractors within a month. They came
-          onboard quickly and immediately started ramping up on the project and were productively contributing shortly after.
+          Around 2014, Vistaprint reorganized into a parent company, Cimpress, and a portfolio of mass customization companies of which Vistaprint was one of them.
+          I moved onto a team called Infrastructure Core Engineering, or ICE, whose primary responsibility was developing core infrastructure. At the time we were working on a migration away from the monolithic
+          vistaprint.com application and into a more microservices architecture. To better facilitate the microservices world, this team was tasked with developing the
+          services like CI/CD, monitoring and alerting, and logging.
+        </p>
+        <strong className="text-black-100">Key Contributions (see <u><a href="#portfolio">Portfolio</a></u> for more details)</strong>
+        <p>
+          <ul>
+            <li>• <strong>Zanzibar</strong></li>
+            <li>• <strong>Uhaul</strong></li>
+            <li>• <strong>MCP ELK</strong></li>
+            <li>• <strong>Zamboni</strong></li>
+          </ul>
         </p>
         <p>
-          Around the end of 2022, I began working with senior leadership on budgets and plans for growing the engineering organization according to the needs of our internal
-          customers. This plan included a mix of more nearshore contractors and full time engineers. In addition, I worked with the Director of Data Engineering to design a
-          unified data access layer which would provide the data scientists with a single entry point into all of the sources of data available to them including postgres databases
-          and Google Big Query. This layer would provide all the necessary authentication and abstract away the differences in query languages between the different sources.
+          <h2 className="text-left font-bold text-black opacity-100">API Management - Lead Software Engineer</h2>
+          In 2016, I joined a new team called API Management. At this time, Cimpress was moving on its strategy of the Mass Customization Platform with the idea
+          that we could write and provide APIs to customers both internal and external for producing things at scale. Due to the widely distributed nature of the teams
+          developing these APIs (there was a mix of teams at various Cimpress business units in the US and Europe) we needed a centralized location for teams to publish
+          and consume API definitions. Additionally, we were tasked with creating the Authentication and Authorization stragegy for the platform to ensure a smooth user
+          experience across the whole suite of applications and APIs on the platform. As a part of this role,
+          I was the account manager, SME, and onboarding consultant for Auth0 which we used for Authentication across the platform. From giving talks at company events
+          demonstrating the capabilities of Auth0, to helping teams onboard both UIs using the Auth0 Lock widget and APIs using Auth0 clients and client credentials grants,
+          I ensured the smooth integration of all new and existing services to our authentication paradigm leading to a consistent and secure user experience across the platform.
+          Additionally, I maintained order in the Auth0 Rules pipeline which allowed custom javascript to be executed on certain Auth0 flows. This had the potential to become
+          very disorganized as many teams had different needs for augmentations to the JWT or other custom authentication logic. I worked to create guardrails and gates to the
+          introduction of new rules or updates to existing rules to prevent duplication, unnecessary rules which could cause perofmance problems, or downtime as broken rules would
+          prevent any login from working. These included restricting rules to being deployed from CI/CD so nothing would get through without code review, and writing documentation on
+          best practices for rule creation.
+          In addition, I managed a team of Platform Success
+          Engineers in the US and India who were tasked with assisting with resolving issues teams were having with APIs or authentication/authorization.
+          <h4 className="text-left font-bold text-black opacity-100">Key Contributions</h4>
         </p>
         <p>
-          In an effort to consolidate varying documentation sources and make it easier for new engineers to onboard as well as simplify the data discovery process, I started a
-          project to introdude <a href="https://backstage.spotify.com/">Spotify's Backstage</a> as a portal into EQRx's data platform. By early 2023, I had successfully deployed
-          Backstage and demonstrated its value as a documentation hub. Shortly afterwards I began a campaign to migrate documentation from other places such as Sharepoint and Guru
-          into Backstage with tagging to make it all easily discoverable from the documentation homepage.
-        </p>
-        <p>
-          Unfortunately, in May of 2023 EQRx announced a 60% companywide reduction in force which included the eliimination of my role as software became deprioritized and I never
-          got to fully execute on my plans for organization expansion and development of the Data Access Layer.
+          <ul>
+            <li>• <strong>Cimpress Open Access Management</strong></li>
+            <li>• <strong>Cimpress Open Catalog API</strong></li>
+            <li>• <strong>Auth0 SME</strong></li>
+          </ul>
         </p>
       </>
     ),
@@ -413,74 +449,39 @@ export const experience: TimelineItem[] = [
     ),
   },
   {
-    date: '2014 - 2018',
-    location: 'Cimpress',
-    title: 'Lead Software Engineer / Devops Engineer',
+    date: '2022 - 2023',
+    location: 'EQRx',
+    title: 'Director, Software Engineering',
     content: (
       <>
-        <h2 className="text-left font-bold text-black opacity-100">The ICE Years - DevOps</h2>
         <p>
-          Around 2014, Vistaprint reorganized into a parent company, Cimpress, and a portfolio of mass customization companies of which Vistaprint was one of them.
-          I moved onto a team called Infrastructure Core Engineering, or ICE, whose primary responsibility was developing core infrastructure. At the time we were working on a migration away from the monolithic
-          vistaprint.com application and into a more microservices architecture. To better facilitate the microservices world, this team was tasked with developing the
-          services like CI/CD, monitoring and alerting, and logging.
-        </p>
-        <strong className="text-black-100">Key Contributions (see <u><a href="#portfolio">Portfolio</a></u> for more details)</strong>
-        <p>
-          <ul>
-            <li>• <strong>Zanzibar</strong></li>
-            <li>• <strong>Uhaul</strong></li>
-            <li>• <strong>MCP ELK</strong></li>
-            <li>• <strong>Zamboni</strong></li>
-          </ul>
+          I joined EQRx in 2022 with the goal of building out the Software Engineering organization from the ground up. At the same time, there was work that needed
+          to be done immediately in support of the data science organization. I got hands on helping redefine a data model for an internal financial forecasting application
+          that was in need of performance improvements. At the same time, there was a need for the development of an API for providing a critical application governing the
+          distribution of drugs to clinical trial sites with the data needed to power the components of the app. I had some budget for hiring, but not a sufficient timeline
+          to source and hire full time engineers. To solve this problem I turned to contracting firms, and was able to hire two nearshore contractors within a month. They came
+          onboard quickly and immediately started ramping up on the project and were productively contributing shortly after.
         </p>
         <p>
-          <h2 className="text-left font-bold text-black opacity-100">API Management - Lead Software Engineer</h2>
-          In 2016, I joined a new team called API Management. At this time, Cimpress was moving on its strategy of the Mass Customization Platform with the idea
-          that we could write and provide APIs to customers both internal and external for producing things at scale. Due to the widely distributed nature of the teams
-          developing these APIs (there was a mix of teams at various Cimpress business units in the US and Europe) we needed a centralized location for teams to publish
-          and consume API definitions. Additionally, we were tasked with creating the Authentication and Authorization stragegy for the platform to ensure a smooth user
-          experience across the whole suite of applications and APIs on the platform. As a part of this role,
-          I was the account manager, SME, and onboarding consultant for Auth0 which we used for Authentication across the platform. From giving talks at company events
-          demonstrating the capabilities of Auth0, to helping teams onboard both UIs using the Auth0 Lock widget and APIs using Auth0 clients and client credentials grants,
-          I ensured the smooth integration of all new and existing services to our authentication paradigm leading to a consistent and secure user experience across the platform.
-          Additionally, I maintained order in the Auth0 Rules pipeline which allowed custom javascript to be executed on certain Auth0 flows. This had the potential to become
-          very disorganized as many teams had different needs for augmentations to the JWT or other custom authentication logic. I worked to create guardrails and gates to the
-          introduction of new rules or updates to existing rules to prevent duplication, unnecessary rules which could cause perofmance problems, or downtime as broken rules would
-          prevent any login from working. These included restricting rules to being deployed from CI/CD so nothing would get through without code review, and writing documentation on
-          best practices for rule creation.
-          In addition, I managed a team of Platform Success
-          Engineers in the US and India who were tasked with assisting with resolving issues teams were having with APIs or authentication/authorization.
-          <h4 className="text-left font-bold text-black opacity-100">Key Contributions</h4>
+          Around the end of 2022, I began working with senior leadership on budgets and plans for growing the engineering organization according to the needs of our internal
+          customers. This plan included a mix of more nearshore contractors and full time engineers. In addition, I worked with the Director of Data Engineering to design a
+          unified data access layer which would provide the data scientists with a single entry point into all of the sources of data available to them including postgres databases
+          and Google Big Query. This layer would provide all the necessary authentication and abstract away the differences in query languages between the different sources.
         </p>
         <p>
-          <ul>
-            <li>• <strong>Cimpress Open Access Management</strong></li>
-            <li>• <strong>Cimpress Open Catalog API</strong></li>
-            <li>• <strong>Auth0 SME</strong></li>
-          </ul>
+          In an effort to consolidate varying documentation sources and make it easier for new engineers to onboard as well as simplify the data discovery process, I started a
+          project to introdude <a href="https://backstage.spotify.com/">Spotify's Backstage</a> as a portal into EQRx's data platform. By early 2023, I had successfully deployed
+          Backstage and demonstrated its value as a documentation hub. Shortly afterwards I began a campaign to migrate documentation from other places such as Sharepoint and Guru
+          into Backstage with tagging to make it all easily discoverable from the documentation homepage.
+        </p>
+        <p>
+          Unfortunately, in May of 2023 EQRx announced a 60% companywide reduction in force which included the eliimination of my role as software became deprioritized and I never
+          got to fully execute on my plans for organization expansion and development of the Data Access Layer.
         </p>
       </>
     ),
-  },
-  {
-    date: '2012 - 2014',
-    location: 'Vistaprint',
-    title: 'Performance Engineer / Senior Software Qualilty Engineer',
-    content: (
-      <p>
-        The start of my full time career came at Vistaprint in 2012. I joined a team with the primary responsibility of running the performance environment for the
-        vistaprint.com release cycle. Every three weeks, as was the release timeline, I would perform load tests using HPs LoadRunner putting the most important workflows
-        though the paces. In addition, I would manually capture code profiles of critical checkout workflows to ensure there were no bottlenecks introduced.
-        In the weeks between performance testing, I was writing software to help me perform these performance duties more efficiently. The first of these tools was
-        called VistaPerf. It was a C# application using WPF that was querying syslog data captured on the webservers for page loading times, and comparing the 7 day
-        rolling average. If that average rose above a certain threshold, it would pop an alert for someone to look closer at that page. I caught a number of non-obvious
-        peformance issues this way and allowed us to quickly remediate. Another application I wrote was also in WPF and was designed to ingest the code profiles I took
-        and perform analysis on them as well as compare them to the historical data. It would show a heat map of the method calls in the code, and make any large spike in
-        calls pop so I could flag them for further investigation.
-      </p>
-    ),
-  },
+  }
+ 
 ];
 
 export const education: TimelineItem[] = [
