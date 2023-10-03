@@ -1,4 +1,3 @@
-import {ArrowTopRightOnSquareIcon} from '@heroicons/react/24/outline';
 import classNames from 'classnames';
 import Image from 'next/image';
 import {FC, memo, useEffect, useState} from 'react';
@@ -37,7 +36,7 @@ const Portfolio: FC = memo(() => {
 Portfolio.displayName = 'Portfolio';
 export default Portfolio;
 
-const ItemOverlay: FC<{item: PortfolioItem}> = memo(({item: {title, description}}) => {
+const ItemOverlay: FC<{item: PortfolioItem}> = memo(({item: {title, description, technologies}}) => {
   const [mobile, setMobile] = useState(false);
   const showOverlay = true;
 
@@ -61,8 +60,10 @@ const ItemOverlay: FC<{item: PortfolioItem}> = memo(({item: {title, description}
         <div className="flex h-full w-full flex-col gap-y-2 overflow-y-auto overscroll-contain">
           <h2 className="text-center font-bold text-white opacity-100">{title}</h2>
           <p className="text-xs text-white opacity-100 sm:text-sm">{description}</p>
+          <p className="text-xs text-white opacity-100 sm:text-sm"><strong className="text-stone-100">Technologies Used: </strong>
+          {technologies.join(', ')}
+            </p>
         </div>
-        <ArrowTopRightOnSquareIcon className="absolute bottom-1 right-1 h-4 w-4 shrink-0 text-white sm:bottom-2 sm:right-2" />
       </div>
     </a>
   );
