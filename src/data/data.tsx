@@ -119,10 +119,10 @@ export const aboutData: About = {
     </>
   ),
   aboutItems: [
-    { label: 'Location', text: 'Whitinsville, MA', Icon: MapIcon },
-    { label: 'Age', text: '34', Icon: CalendarIcon },
-    { label: 'Nationality', text: 'American / English', Icon: FlagIcon },
-    { label: 'Interests', text: 'Triathlons, Golf, Peloton, Music', Icon: SparklesIcon },
+    {label: 'Location', text: 'Whitinsville, MA', Icon: MapIcon},
+    {label: 'Age', text: '34', Icon: CalendarIcon},
+    {label: 'Nationality', text: 'American / English', Icon: FlagIcon},
+    {label: 'Interests', text: 'Triathlons, Golf, Peloton, Music', Icon: SparklesIcon},
   ],
 };
 
@@ -557,6 +557,6 @@ export const contact: ContactSection = {
  * Social items
  */
 export const socialLinks: Social[] = [
-  { label: 'Github', Icon: GithubIcon, href: 'https://github.com/jdaviscooke' },
-  { label: 'LinkedIn', Icon: LinkedInIcon, href: 'https://linkedin.com/in/jason-davis-cooke' }
+  {label: 'Github', Icon: GithubIcon, href: 'https://github.com/jdaviscooke'},
+  {label: 'LinkedIn', Icon: LinkedInIcon, href: 'https://linkedin.com/in/jason-davis-cooke'}
 ];
